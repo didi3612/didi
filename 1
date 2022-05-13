@@ -1,0 +1,31 @@
+fin=open('polygon.dat')
+n=fin.readline() #n=10
+for i in range(int(n)): # n=10
+   n2=fin.readline() # n2=5
+ 
+   k=0
+   L=0
+   A=0
+ 
+ for i in range(int(n2)-1): # n2=5 #### 要減 1 減少 計算的次數
+ 
+   if k==0:
+     sol = fin.readline() #sol 指定 xp ,yp
+     t1 ,t2 =sol.split()
+     xp = float(t1)
+     yp = float(t2)
+     k=k+1
+     
+   line = fin.readline()
+   s1 , s2 = line.split()
+   x = float(s1)
+   y = float(s2)
+   L+=((x-xp)**2+(y-yp)**2)**(1/2)
+   A+=((y+yp)*(xp-x))/2
+ 
+   xp=x
+   yp=y
+ 
+ 
+ print(f"perimeter:{abs(L):9.3f}")
+ print(f"Area: {abs(A):12.3f}")
