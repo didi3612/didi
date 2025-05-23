@@ -12,6 +12,7 @@ import seaborn as sns
 
 import matplotlib.pyplot as plt
 
+---
 
 > **在python模式中,下載檔案的方式**
 ```
